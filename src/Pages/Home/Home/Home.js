@@ -4,7 +4,21 @@ import hero from '../../../Assets/hero/hero.jpg'
 
 const Home = () => {
     return (
-        <section className="dark:bg-gray-800 dark:text-gray-100">
+        //Banner Section
+       <div>
+
+<div className="hero min-h-screen" style={{ backgroundImage: `url("https://placeimg.com/1000/800/arch")` }}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-md">
+      <h1 className="mb-5 text-5xl font-bold"><span className='text-rose-500'>Home</span> Food</h1>
+      <p className="mb-5">Homemade food is usually prepared with natural ingredients compared to commercially prepared food. Plainly, the food has its taste however those are ready using unprocessed foods that are by no means healthy.</p>
+      <button className="btn btn-error text-white">Get Started</button>
+    </div>
+  </div>
+</div>
+
+                <section className="dark:bg-gray-800 dark:text-gray-100">
             <div className="grid grid-cols-2 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 className="text-5xl font-bold leading-none sm:text-6xl">Home Food Healthy Food
@@ -21,6 +35,13 @@ const Home = () => {
                 </div>
             </div>
         </section>
+
+       </div>
+
+
+
+        
+
     );
 };
 

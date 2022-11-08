@@ -33,7 +33,7 @@ const Header = () => {
                 </div>
                 <img className= "me-3" src={image} alt="" />
 
-                <Link className="btn btn-ghost uppercase text-xl">Home Food</Link>
+                <Link to='/'className="btn uppercase text-2xl font-bold"><span className='text-rose-500'>Home</span> Food</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -51,16 +51,15 @@ const Header = () => {
               user?.uid ? 
               <>
             {user?.displayName}
-            <button className="btn btn-error" onClick={handleLogout}>Log Out</button>
+            <button className="btn btn-error mr-3 text-white" onClick={handleLogout}>Log Out</button>
+            <button className="btn btn-error mr-3 text-white">My Reviews</button>
+            <button className="btn btn-error mr-8 text-white">Add Service</button>
               </>
               :
               <>
               
-              <form className="d-flex">
-            <Link to = '/register'><button type="button" className="btn btn-outline-info btn-lg me-2">Register</button></Link>
-          </form>
           <form className="d-flex">
-            <Link to = '/login'><button type="button" className="btn btn-outline-info btn-lg me-2">Login</button></Link>
+            <Link to = '/login'><button type="button" className="btn btn-error mr-2 text-white">Login</button></Link>
           </form>
               
               </>
@@ -70,9 +69,7 @@ const Header = () => {
             </>
 
             </div>
-            <div className="navbar-end">
-                <button className="btn btn-warning hover:bg-black hover:text-white hover:border-black text-[15px] font-semibold normal-case">Restaurant Search</button>
-            </div>
+            
         </div>
 
     );

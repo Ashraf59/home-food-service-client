@@ -48,11 +48,11 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                  <input className="btn btn-error" type="submit" value="Login" />
+                  <input className="btn btn-error text-white" type="submit" value="Login" />
                 
               </div>
             </form>
-            <p className='text-center'>New in Genius Car? Please <Link className='font-semibold text-rose-700' to = '/signup'>Sign Up</Link></p>
+            <p className='text-center'>Are you new in Home Food? Please <Link className='font-semibold text-rose-700' to = '/signup'>Sign Up</Link></p>
           </div>
         </div>
       </div>
