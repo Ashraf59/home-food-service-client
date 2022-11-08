@@ -23,11 +23,11 @@ const Header = () => {
                 </label>
                 <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><Link to ='/home'>Home</Link></li>
-                    <li tabIndex={0}>
+                    {/* <li tabIndex={0}>
                         <Link className="justify-between">
                         Parent
                         </Link>
-                    </li>
+                    </li> */}
                     <li><Link to = '/blog'>Blog</Link></li>
                 </ul>
                 </div>
@@ -38,11 +38,11 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                 <li><Link to='/' className='mr-5'>Home</Link></li>
-                <li tabIndex={0}>
+                {/* <li tabIndex={0}>
                     <Link className='mr-5'>Parent</Link>
-                </li>
+                </li> */}
                 <li><Link to='/blog' className='mr-5'>Blog</Link></li>
-                <li><Link to='/login'>Login</Link></li>
+                {/* <li><Link to='/login'>Login</Link></li> */}
                 </ul>
             </div>
             <div className='d-flex align-items-center'>
@@ -52,8 +52,8 @@ const Header = () => {
               <>
             {user?.displayName}
             <button className="btn btn-error mr-3 text-white" onClick={handleLogout}>Log Out</button>
-            <button className="btn btn-error mr-3 text-white">My Reviews</button>
-            <button className="btn btn-error mr-8 text-white">Add Service</button>
+            <button className="btn btn-error mr-3 text-white"><Link to='review'></Link>My Review</button>
+            <button className="btn btn-error mr-8 text-white"><Link to='service'>Add Service</Link></button>
               </>
               :
               <>

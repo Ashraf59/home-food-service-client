@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import hero from '../../../Assets/hero/hero.jpg'
 import hero2 from '../../../Assets/hero/hero2.jpg';
+import UseTitle from '../../../Hooks/UseTitle';
 
 const Home = () => {
+    UseTitle('Home')
     return (
         //Banner Section
        <div>
