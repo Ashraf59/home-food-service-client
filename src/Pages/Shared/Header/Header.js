@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import image from '../../../Assets/images/logo.jpg';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 const Header = () => {
+
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+    .then()
+    .catch()
+  }
+
+    
     return (
       <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -33,6 +44,31 @@ const Header = () => {
                 <li><Link to='/blog' className='mr-5'>Blog</Link></li>
                 <li><Link to='/login'>Login</Link></li>
                 </ul>
+            </div>
+            <div className='d-flex align-items-center'>
+            <>
+            {
+              user?.uid ? 
+              <>
+            {user?.displayName}
+            <button className="btn btn-error" onClick={handleLogout}>Log Out</button>
+              </>
+              :
+              <>
+              
+              <form className="d-flex">
+            <Link to = '/register'><button type="button" className="btn btn-outline-info btn-lg me-2">Register</button></Link>
+          </form>
+          <form className="d-flex">
+            <Link to = '/login'><button type="button" className="btn btn-outline-info btn-lg me-2">Login</button></Link>
+          </form>
+              
+              </>
+
+            }
+            
+            </>
+
             </div>
             <div className="navbar-end">
                 <button className="btn btn-warning hover:bg-black hover:text-white hover:border-black text-[15px] font-semibold normal-case">Restaurant Search</button>
