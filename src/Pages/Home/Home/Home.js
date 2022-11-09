@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import hero from '../../../Assets/hero/hero.jpg'
 import hero2 from '../../../Assets/hero/hero2.jpg';
 import UseTitle from '../../../Hooks/UseTitle';
+import Services from '../Services/Services';
 
 const Home = () => {
     UseTitle('Home')
@@ -20,6 +21,8 @@ const Home = () => {
     </div>
   </div>
 </div>
+
+            <Services></Services>
 
                 <section className="dark:bg-gray-800 dark:text-gray-100">
             <div className="grid grid-cols-2 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
