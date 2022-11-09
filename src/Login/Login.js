@@ -2,9 +2,12 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import img from '../../src/Assets/login/login.svg'
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
+import UseTitle from '../Hooks/UseTitle';
 
 const Login = () => {
     const {login} = useContext(AuthContext);
+    UseTitle('Login')
+
 
     const handleLogin = event => {
         event.preventDefault();

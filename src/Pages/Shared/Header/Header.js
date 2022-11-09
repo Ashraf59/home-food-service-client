@@ -51,15 +51,22 @@ const Header = () => {
               user?.uid ? 
               <>
             {user?.displayName}
-            <button className="btn btn-error mr-3 text-white" onClick={handleLogout}>Log Out</button>
-            <button className="btn btn-error mr-3 text-white"><Link to='review'></Link>My Review</button>
-            <button className="btn btn-error mr-8 text-white"><Link to='service'>Add Service</Link></button>
+            <ul className="menu menu-horizontal p-0">
+                <li><Link to='/review' className='mr-5'>My Reviews</Link></li>
+                
+                <li><Link to='/service' className='mr-5'>Add Service</Link></li>
+                
+                </ul>
+            <button className="btn btn-outline btn-error mr-3 text-white" onClick={handleLogout}>Log Out</button>
               </>
               :
               <>
               
           <form className="d-flex">
-            <Link to = '/login'><button type="button" className="btn btn-error mr-2 text-white">Login</button></Link>
+            <Link to = '/login'><button type="button" className="btn btn-outline btn-error mr-2 text-white">Login</button></Link>
+          </form>
+          <form className="d-flex">
+            <Link to = '/signup'><button type="button" className="btn btn-outline btn-error mr-2 text-white">Sign Up</button></Link>
           </form>
               
               </>

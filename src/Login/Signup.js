@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom';
 import {FaGoogle} from 'react-icons/fa';
 import img from '../../src/Assets/signup/Signup.svg';
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
+import UseTitle from '../Hooks/UseTitle';
 
 
 const Signup = () => {
     const {createUser, providerLogin} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
+    UseTitle('Sign Up')
+
 
     const handleSignup = event => {
         event.preventDefault();
@@ -71,7 +74,7 @@ const Signup = () => {
                     <button className="btn btn-outline btn-error w-full"><FaGoogle onClick={handleGoogleSignIn} className='me-3 font'/></button>
                     </div>
       </form>
-      <p className='text-center'>Haven't you account? Please <Link className='font-semibold text-rose-700' to = '/login'>Login</Link></p>
+      <p className='text-center'>Already have an account? Please <Link className='font-semibold text-rose-700' to = '/login'>Login</Link></p>
     </div>
   </div>
 </div>
