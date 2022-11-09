@@ -11,6 +11,11 @@ const MyReview = () => {
         .then(res => res.json())
         .then(data => setReviews(data))
     },[user?.email])
+
+    const handleDelete = (id) => {
+        console.log(id);
+    }
+
     return (
         <div className="container p-2 mx-auto sm:p-4 text-gray-600 mt-10">
             <h2 className="mb-5 text-2xl font-semibold text-center text-gray-600 leading-tight">Customer Reviews</h2>
@@ -30,12 +35,14 @@ const MyReview = () => {
                             <th className="p-3">Email</th>
                             <th className="p-3">Image</th>
                             <th className="p-3">Ratings</th>
+                            <th className="p-3">Status</th>
                         </tr>
                     </thead>
                     {
                             reviews.map(review => <DetailReview
                                 key={review._id}
                                 review={review}
+                                handleDelete={handleDelete}
                             ></DetailReview>)
                     }
                 </table>
