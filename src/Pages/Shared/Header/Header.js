@@ -23,12 +23,9 @@ const Header = () => {
                 </label>
                 <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                     <li><Link to ='/home'>Home</Link></li>
-                    {/* <li tabIndex={0}>
-                        <Link className="justify-between">
-                        Parent
-                        </Link>
-                    </li> */}
                     <li><Link to = '/blog'>Blog</Link></li>
+                    <li><Link to='/services'>All Service</Link></li>
+
                 </ul>
                 </div>
                 <img className= "me-3" src={image} alt="" />
@@ -38,11 +35,10 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                 <li><Link to='/' className='mr-5'>Home</Link></li>
-                {/* <li tabIndex={0}>
-                    <Link className='mr-5'>Parent</Link>
-                </li> */}
+                <li><Link to='/services'>All Service</Link></li>
+
+
                 <li><Link to='/blog' className='mr-5'>Blog</Link></li>
-                {/* <li><Link to='/login'>Login</Link></li> */}
                 </ul>
             </div>
             <div className='d-flex align-items-center'>

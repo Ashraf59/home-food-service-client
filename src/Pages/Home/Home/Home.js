@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AllServices from '../../../AllServices/AllServices';
 import hero from '../../../Assets/hero/hero.jpg'
 import hero2 from '../../../Assets/hero/hero2.jpg';
 import UseTitle from '../../../Hooks/UseTitle';
@@ -22,7 +23,7 @@ const Home = () => {
   </div>
 </div>
 
-            <Services></Services>
+            <AllServices></AllServices>
 
                 <section className="dark:bg-gray-800 dark:text-gray-100">
             <div className="grid grid-cols-2 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
