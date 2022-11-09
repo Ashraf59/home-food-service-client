@@ -11,8 +11,8 @@ const AllServices = () => {
     return (
         <div>
             <div>
-                <h2 className="text-5xl font-semibold text-rose-600 text-center mt-20">Our Services</h2>
-                <p className='text-gray mx-auto text-center my-8 w-1/3'>Home food Healthy food, so we maintain strongly hygenic kitchen environment and all food ingredients. </p>
+                <h2 className="text-5xl font-semibold text-rose-500 text-center mt-20">Our Services</h2>
+                <p className='text-gray mx-auto text-center my-8 w-1/3 text-gray-600'>Home food Healthy food, so we maintain strongly hygenic kitchen environment and all food ingredients. </p>
             </div>
             <div className='grid gap-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center  '>
                 {

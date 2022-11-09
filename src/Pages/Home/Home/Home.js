@@ -25,6 +25,13 @@ const Home = () => {
 
             <AllServices></AllServices>
 
+            <div className="card-actions justify-center mt-12">
+        <Link to = '/services'>
+      <button className="btn btn-error mx-auto text-white">See All</button>
+
+        </Link>
+        </div>
+
                 <section className="dark:bg-gray-800 dark:text-gray-100">
             <div className="grid grid-cols-2 p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
                 <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">

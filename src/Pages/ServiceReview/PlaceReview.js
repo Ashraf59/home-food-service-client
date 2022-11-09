@@ -50,7 +50,7 @@ const PlaceReview = ({service}) => {
         <div className='mt-10'>
             <form onSubmit={handlePlaceOrder}>
                 <div className='px-6'>
-                    <h2 className='text-4xl mb-2'>Add Your Reviews: {}</h2>
+                    <h2 className='text-4xl mb-2 text-center shadow bg-slate-50 rounded-md p-3 font-semibold'>Add Your Reviews{}</h2>
                 </div>
                 <div className='grid grid-cols-1 p-6 lg:grid-cols-2 gap-4'>
                     <input type="text" name='service' placeholder="Service Name" className="input input-bordered w-full" defaultValue={serviceName} readOnly />
@@ -59,10 +59,10 @@ const PlaceReview = ({service}) => {
                     <input type="text" name='email' defaultValue={user?.email} placeholder="Your Email" className="input input-bordered w-full" readOnly />
                 </div>
                 <div className='p-6'>
-                    <textarea className="textarea textarea-primary h-24 w-full" name='message' placeholder="Bio" required></textarea>
+                    <textarea className="textarea textarea-bordered h-24 w-full" name='message' placeholder="Bio" required></textarea>
                 </div>
-                <div className='px-6'>
-                    <input className='btn btn-accent text-white' type="submit" value="Add Review" />
+                <div className='px-6 card-actions justify-center'>
+                    <input className='btn btn-error text-white' type="submit" value="Add Review" />
                 </div>
             </form>
         </div>

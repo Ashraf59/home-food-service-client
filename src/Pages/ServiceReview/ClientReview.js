@@ -11,7 +11,7 @@ const ClientReview = () => {
     }, [])
     return (
         <div className="container p-2 mx-auto sm:p-4 text-gray-600 mt-10">
-            <h2 className="mb-5 text-2xl font-semibold text-center text-gray-600 leading-tight">Customer Reviews</h2>
+            <h2 className="mb-5 text-3xl text-center w-2/5 mx-auto font-semibold shadow bg-slate-50 rounded-md p-3 leading-tight">Customer Reviews</h2>
             <div className="overflow-x-auto">
                 <table className="min-w-full text-xs">
                     <colgroup>

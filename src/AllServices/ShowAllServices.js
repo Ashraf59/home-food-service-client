@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ShowAllServices = ({allservice}) => {
-    const {serviceName, message, price, image} = allservice;
+    const {_id, serviceName, message, price, image} = allservice;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
   <figure><img src={image} alt="food" /></figure>
@@ -12,15 +12,12 @@ const ShowAllServices = ({allservice}) => {
     <>{message.length > 100 ?
               <p>{message.slice(0, 100) + '...'}</p>
               :
-              <p>{message}</p>
+              <p className='text-gray-600'>{message}</p>
             
             }</>
-    <div className="card-actions justify-end">
-        <Link to = '/services'>
-      <button className="btn btn-error mx-auto text-white">See All</button>
-
-        </Link>
-    </div>
+            <div className="card-actions justify-center">
+      <Link to={`/services/${_id}`}><button className="btn btn-error mx-auto text-white">View Details</button></Link>
+      </div>
   </div>
 </div>
     );
