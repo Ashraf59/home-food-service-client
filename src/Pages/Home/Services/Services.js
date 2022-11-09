@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import AllServices from '../../../AllServices/AllServices';
 import ServiceCard from '../ServiceCard/ServiceCard';
 
 const Services = () => {
@@ -11,7 +10,6 @@ const Services = () => {
     }, [])
     return (
         <div>
-            {/* <AllServices></AllServices> */}
             <div>
                 <h2 className="text-5xl font-semibold text-rose-500 text-center mt-10">Our Services</h2>
                 <p className='text-gray mx-auto text-center my-8 w-1/3'>Home food Healthy food, so we maintain strongly hygenic kitchen environment and all food ingredients. </p>
