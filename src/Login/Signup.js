@@ -1,6 +1,6 @@
 import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {FaGoogle} from 'react-icons/fa';
 import img from '../../src/Assets/signup/Signup.svg';
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
@@ -10,6 +10,8 @@ import UseTitle from '../Hooks/UseTitle';
 const Signup = () => {
     const {createUser, providerLogin} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
+    const navigate = useNavigate();
+
     UseTitle('Sign Up')
 
 
@@ -23,6 +25,8 @@ const Signup = () => {
         .then(result => {
             const user = result.user;
             console.log(user)
+            form.reset();
+            navigate('/');
         })
         .catch(error => console.error(error));
       }

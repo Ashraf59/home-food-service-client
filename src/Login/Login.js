@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../../src/Assets/login/login.svg'
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
 import UseTitle from '../Hooks/UseTitle';
 
 const Login = () => {
     const {login} = useContext(AuthContext);
+    const navigate = useNavigate();
+
     UseTitle('Login')
 
 
@@ -20,6 +22,8 @@ const Login = () => {
         .then(result => {
           const user = result.user;
           console.log(user)
+          form.reset();
+          navigate('/');
         })
         .catch(error => console.error(error))
     }
