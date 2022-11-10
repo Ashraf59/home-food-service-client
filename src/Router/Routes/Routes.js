@@ -8,6 +8,7 @@ import Services from "../../Pages/Home/Services/Services";
 import MyReview from "../../Pages/MyReview/MyReview";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
+import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',

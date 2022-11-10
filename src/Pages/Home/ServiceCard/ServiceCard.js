@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import UseTitle from '../../../Hooks/UseTitle';
 
+
 const ServiceCard = ({service}) => {
     const {_id, serviceName, message, price, image} = service;
             UseTitle('All Services')
