@@ -5,7 +5,7 @@ import { AuthContext } from '../context/AuthProvider/AuthProvider';
 import UseTitle from '../Hooks/UseTitle';
 
 const Login = () => {
-    const {login} = useContext(AuthContext);
+    const {login, setLoading} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -26,13 +26,16 @@ const Login = () => {
           const user = result.user;
           console.log(user)
           form.reset();
-          navigate('/');
+          // navigate('/');
           if(user?.email){
             navigate(from, {replace: true})
             }
             
         })
         .catch(error => console.error(error))
+        .finally(() => {
+          setLoading(false)
+        })
     }
     
     return (

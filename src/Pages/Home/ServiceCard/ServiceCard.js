@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import UseTitle from '../../../Hooks/UseTitle';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 
 
 const ServiceCard = ({service}) => {

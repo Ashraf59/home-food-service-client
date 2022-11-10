@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 import UseTitle from '../../Hooks/UseTitle';
 import DetailReview from './DetailReview';
@@ -9,6 +10,7 @@ const MyReview = () => {
     const [reviews, setReviews] = useState([]);
     const [refresh, setRefresh] = useState(false);
     UseTitle('My Review')
+    const navigate = useNavigate();
      
     useEffect(() => {
         fetch(`http://localhost:5000/review?email=${user?.email}`)
@@ -28,6 +30,10 @@ const MyReview = () => {
                 console.log(data)
             }
         })
+    }
+
+    const handleUpdate = (id) => {
+        navigate(`/reviews/update/${id}`)
     }
 
     return (
@@ -53,10 +59,11 @@ const MyReview = () => {
                         </tr>
                     </thead>
                     {
-                            reviews.map(review => <DetailReview
+                            reviews.sort((a, b) => b.time - a.time).map(review => <DetailReview
                                 key={review._id}
                                 review={review}
                                 handleDelete={handleDelete}
+                                handleUpdate={handleUpdate}
                             ></DetailReview>)
                     }
                 </table>

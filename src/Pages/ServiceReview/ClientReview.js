@@ -31,7 +31,7 @@ const ClientReview = () => {
                         </tr>
                     </thead>
                     {
-                            reviews.map(review => <SingleReview
+                            reviews.sort((a, b) => b.time - a.time).map(review => <SingleReview
                             key={review._id}
                             review={review}
                             ></SingleReview>)

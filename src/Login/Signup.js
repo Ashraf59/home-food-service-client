@@ -8,7 +8,7 @@ import UseTitle from '../Hooks/UseTitle';
 
 
 const Signup = () => {
-    const {createUser, providerLogin} = useContext(AuthContext)
+    const {createUser, providerLogin, setLoading} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider()
     const navigate = useNavigate();
 
@@ -39,6 +39,10 @@ const Signup = () => {
         })
 
         .catch(error => console.error(error))
+        .finally(() => {
+          setLoading(false)
+        })
+        
     }
     return (
         <div className="hero w-full my-20">

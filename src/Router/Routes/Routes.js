@@ -6,6 +6,7 @@ import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Services from "../../Pages/Home/Services/Services";
 import MyReview from "../../Pages/MyReview/MyReview";
+import UpdateReview from "../../Pages/MyReview/UpdateReview";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
 import ServiceReview from "../../Pages/ServiceReview/ServiceReview";
 import ErrorPage from "../../Pages/Shared/ErrorPage/ErrorPage";
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path:'/review',
                 element: <PrivateRoute><MyReview></MyReview></PrivateRoute>
+            },
+            {
+                path: '/reviews/update/:id',
+                element: <UpdateReview/>
             }
         ]
     }

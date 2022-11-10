@@ -6,6 +6,7 @@ import UseTitle from '../../Hooks/UseTitle';
 const AddService = () => {
     const {user} = useContext(AuthContext);
     UseTitle('Add Service')
+    const data = new Date();
 
 
     const handlePlaceOrder = event => {
@@ -24,7 +25,8 @@ const AddService = () => {
             image: photoURL,
             price: price,
             email: email,
-            message: message
+            message: message,
+            time:data.getTime()
         }
 
         // create services

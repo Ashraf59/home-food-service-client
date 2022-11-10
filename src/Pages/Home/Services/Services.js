@@ -16,7 +16,7 @@ const Services = () => {
             </div>
             <div className='grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center my-20 '>
                 {
-                    services.map(service => <ServiceCard
+                    services.sort((a, b) => b.time - a.time).map(service => <ServiceCard
                     
                         key = {service._id}
                         service = {service}

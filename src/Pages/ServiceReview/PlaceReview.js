@@ -7,6 +7,7 @@ const PlaceReview = ({service}) => {
     const {user} = useContext(AuthContext);
     const {serviceName} = service;
     const navigate = useNavigate();
+    const data = new Date();
     const handlePlaceOrder = event => {
         event.preventDefault();
 
@@ -23,7 +24,8 @@ const PlaceReview = ({service}) => {
             image: photoURL,
             rating: rating,
             email: email,
-            message: message
+            message: message,
+            time: data.getTime()
         }
 
         // create services
@@ -46,9 +48,7 @@ const PlaceReview = ({service}) => {
                 navigate('/login')
                 toast.error('You have to login first')
             }
-            // if(user?.email){
-            //     toast.success('Now You can give review')
-            // }
+           
             console.log(data)})
         .catch(error => console.error(error))
         }
