@@ -1,12 +1,15 @@
 import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../src/Assets/login/login.svg'
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
 import UseTitle from '../Hooks/UseTitle';
 
 const Login = () => {
     const {login} = useContext(AuthContext);
+    const location = useLocation();
     const navigate = useNavigate();
+
+  const from = location.state?.from?.pathname || '/';
 
     UseTitle('Login')
 
@@ -24,6 +27,10 @@ const Login = () => {
           console.log(user)
           form.reset();
           navigate('/');
+          if(user?.email){
+            navigate(from, {replace: true})
+            }
+            
         })
         .catch(error => console.error(error))
     }

@@ -10,7 +10,7 @@ const ShowAllServices = ({allservice}) => {
            <figure>
   <PhotoProvider>
       <PhotoView src={image}>
-        <img src={image} alt="" />
+        <img src={image} alt="food" />
       </PhotoView>
     </PhotoProvider>
   </figure>

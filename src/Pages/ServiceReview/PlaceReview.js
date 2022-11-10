@@ -37,11 +37,18 @@ const PlaceReview = ({service}) => {
         })
         .then(res => res.json())
         .then(data => {
-            if(data.acknowledged){
+            if(data.acknowledged && user?.email){
                 toast.success('Review placed Successfully')
                 form.reset();
                 navigate('/');
             }
+            else{
+                navigate('/login')
+                toast.error('You have to login first')
+            }
+            // if(user?.email){
+            //     toast.success('Now You can give review')
+            // }
             console.log(data)})
         .catch(error => console.error(error))
         }
