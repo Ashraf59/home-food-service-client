@@ -11,7 +11,7 @@ const ServiceReview = () => {
     // console.log(id);
     
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${id}`)
+        fetch(`https://home-food-server.vercel.app/services/${id}`)
         .then(res => res.json())
         .then(data => setServices(data))
     } , [])
